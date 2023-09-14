@@ -17,7 +17,7 @@ The program will look in the "assignments" folder for valid txt files containing
 
 It will print out a list of found valid files, requesting the user to choose one of them.
 
-If the user gives in a valid filename, the file will be read and the sudoku will be printed to console, solved as much as possible.
+If the user gives in a valid filename, the file will be read and the sudoku will be solved and printed to console.
 
 A valid file is a simple txt file with 9 lines.
 Each line should contain 9 characters, either a digit from 1-9, or an 'X' to indicate an empty spot.
