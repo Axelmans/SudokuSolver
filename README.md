@@ -15,12 +15,11 @@ Step 4: In this window, execute: ```./SudokuSolver```
 ## Usage Guide
 The program will look in the "assignments" folder for valid txt files containing sudoku information.
 
-It will print out a list of found valid files, and will then request the user to select one of them by typing its name as input.
+It will print out a list of found valid files, requesting the user to choose one of them.
 
 If the user gives in a valid filename, the file will be read and the sudoku will be printed to console, solved as much as possible.
 
-But what makes for a valid file? Well it's not very complicated.
-The program requires a simple text file of 9 lines. 
+A valid file is a simple txt file with 9 lines.
 Each line should contain 9 characters, either a digit from 1-9, or an 'X' to indicate an empty spot.
 Here's an example of a valid file:
 
