@@ -24,7 +24,7 @@ Sudoku::Sudoku(const string &filename) {
                     continue;
                 }
                 // X = Empty Spot; Use 0 as placeholder.
-                else if (number == 'X') {
+                else if (tolower(number) == 'x') {
                     grid[r][c] = 0;
                 }
                 else {
@@ -49,10 +49,15 @@ Sudoku::Sudoku(const string &filename) {
 bool Sudoku::validateFile(const string &filename) {
     ifstream input(filename);
     string line;
+    int lines = 0;
     while(getline(input, line)){
         // Line should at least have 9 characters (digits/X).
-        if(line.size() < 9){
+        if(line.size() < 9 || lines >= 9){
             return false;
+        }
+        // Ignore empty lines
+        if(line.empty()){
+            continue;
         }
         int digits_on_line = 0;
         for(char& number: line){
@@ -61,11 +66,15 @@ bool Sudoku::validateFile(const string &filename) {
                 continue;
             }
             // Invalid characters/More than 9 digits = Not Allowed.
-            if((number != 'X' && !isdigit(number)) || digits_on_line == 9){
+            if((tolower(number) != 'x' && !isdigit(number)) || digits_on_line == 9){
                 return false;
             }
             digits_on_line++;
         }
+        if(digits_on_line != 9){
+            return false;
+        }
+        lines++;
     }
     return true;
 }
