@@ -2,7 +2,7 @@
 ## General
 This program solves any sudoku given by the user.
 
-Sudoku assignments can be provided by valid txt files, syntax will be explained in the usage guide.
+Sudoku assignments can be provided by valid .txt files, syntax will be explained in the usage guide.
 ## Installation + Setup + Run Guide
 Step 1: Download or clone the repository.
 
