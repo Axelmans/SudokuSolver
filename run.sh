@@ -1,4 +1,4 @@
 mkdir build
 cd build || exit
 cmake .. && make
-./SudokuSolver
+echo "Program created in \"build\" folder, add .txt files in the \"assignments\" folder."
