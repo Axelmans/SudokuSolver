@@ -2,15 +2,15 @@
 ## General
 This program solves any sudoku given by the user.
 
-Sudoku assignments can be provided by valid txt files, syntax will be explained in the usage guide.
+Sudoku assignments can be provided by valid .txt files, syntax will be explained in the usage guide.
 ## Installation + Setup + Run Guide
 Step 1: Download or clone the repository.
 
 Step 2: Run the "run.sh" file
 
-Step 3: There should now be a folder named "build". Go inside it and open it in Terminal/Powershell.
+Step 3: There should now be a folder named "build", this folder will contain another folder: "assignments", this is where .txt files should be added.
 
-Step 4: In this window, execute: ```./SudokuSolver```
+Step 4: Open a terminal in the "build" folder, and execute: ```./SudokuSolver```
 
 ## Usage Guide
 The program will look in the "assignments" folder for valid txt files containing sudoku information.
@@ -38,5 +38,5 @@ X 8 X X X X X 5 X
 For convenience, empty lines and spaces are ignored. In addition, 'X' is not case-sensitive.
 
 However, the program will also check if the input sudoku is valid.
-Should an input file contain any invalid duplicates, it'll still be deemed invalid.
+Should the file contain a row/column/box with duplicates, it'll still be deemed invalid.
 Make sure to check on this beforehand.
